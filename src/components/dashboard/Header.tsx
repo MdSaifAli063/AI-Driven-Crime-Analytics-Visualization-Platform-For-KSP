@@ -35,22 +35,21 @@ export function Header({ title }: { title: string }) {
   const unread = unreadCount;
 
   return (
-    <header className="sticky top-0 z-30 flex flex-wrap items-center gap-2 border-b border-soft glass-strong px-3 py-2.5 sm:gap-3 sm:px-4 sm:py-3">
-      <div className="min-w-0 flex items-center gap-2">
-        <div className="min-w-0">
-          <div className="truncate font-mono text-sm font-bold text-text-primary sm:text-base md:text-lg">{title}</div>
-          <div className="hidden text-[10px] uppercase tracking-wider text-muted sm:flex sm:items-center sm:gap-1.5">
-            CrimeIQ · SCRB
-            <span className="ml-1 inline-flex items-center gap-1 rounded-full border border-soft bg-elevated px-1.5 py-0.5 text-[9px] font-semibold text-danger">
-              <span className="live-dot inline-block h-1.5 w-1.5 rounded-full bg-danger" /> LIVE
-            </span>
+    <header className="sticky top-0 z-30 border-b border-soft glass-strong">
+      {/* ── Main toolbar row ── */}
+      <div className="flex items-center gap-2 px-3 py-2.5 sm:gap-3 sm:px-4 sm:py-3">
+        <div className="min-w-0 flex items-center gap-2">
+          <div className="min-w-0">
+            <div className="truncate font-mono text-sm font-bold text-text-primary sm:text-base md:text-lg">{title}</div>
+            <div className="hidden text-[10px] uppercase tracking-wider text-muted sm:flex sm:items-center sm:gap-1.5">
+              CrimeIQ · SCRB
+              <span className="ml-1 inline-flex items-center gap-1 rounded-full border border-soft bg-elevated px-1.5 py-0.5 text-[9px] font-semibold text-danger">
+                <span className="live-dot inline-block h-1.5 w-1.5 rounded-full bg-danger" /> LIVE
+              </span>
+            </div>
           </div>
         </div>
-      </div>
-      <div className="order-3 w-full md:order-2 md:flex-1 md:w-auto md:max-w-2xl">
-        <AlertTicker />
-      </div>
-      <div className="order-2 ml-auto flex items-center gap-2 md:order-3">
+        <div className="ml-auto flex items-center gap-2">
         <select value={range} onChange={(e) => setRange(e.target.value)} className="hidden rounded-lg border border-soft bg-surface px-2.5 py-1.5 text-xs text-text-primary outline-none md:block">
           {RANGES.map((r) => <option key={r}>{r}</option>)}
           <option>Custom</option>
@@ -134,8 +133,13 @@ export function Header({ title }: { title: string }) {
             </div>
           )}
         </div>
+        </div>
+        <HelpDialog open={openHelp} onClose={() => setOpenHelp(false)} />
       </div>
-      <HelpDialog open={openHelp} onClose={() => setOpenHelp(false)} />
+      {/* ── Full-width ticker row ── */}
+      <div className="border-t border-soft">
+        <AlertTicker />
+      </div>
     </header>
   );
 }
