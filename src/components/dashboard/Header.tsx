@@ -68,8 +68,8 @@ export function Header({ title }: { title: string }) {
             )}
           </button>
           {openBell && (
-            <div className="absolute right-0 top-full z-40 mt-2 w-[22rem] overflow-hidden rounded-xl border border-soft bg-surface shadow-2xl ring-1 ring-black/5">
-              <div className="flex items-center justify-between border-b border-soft bg-gradient-to-r from-[var(--accent)]/10 to-transparent px-4 py-2.5">
+            <div className="absolute right-[-4.25rem] sm:right-0 top-full z-40 mt-2 w-[calc(100vw-2rem)] max-w-[22rem] sm:w-[22rem] overflow-hidden rounded-xl border border-soft bg-surface shadow-2xl ring-1 ring-black/5">
+              <div className="flex items-center justify-between border-b border-soft bg-gradient-to-r from-[var(--accent)]/10 to-transparent px-3 py-2.5 sm:px-4">
                 <div>
                   <div className="text-xs font-semibold uppercase tracking-wider text-text-primary">Notifications</div>
                   <div className="text-[10px] text-muted">{unread} unread · {alerts.length} total</div>
