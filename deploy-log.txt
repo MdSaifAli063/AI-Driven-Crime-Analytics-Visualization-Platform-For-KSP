@@ -1,2 +1,58 @@
 Starting catalyst deploy...
+Running npm run build before deploy...
+STDOUT: 
+> build
+> vite build
+
+
+STDERR: [33mThe plugin "vite-tsconfig-paths" is detected. Vite now supports tsconfig paths resolution natively via the [1mresolve.tsconfigPaths[22m option. You can remove the plugin and set [1mresolve.tsconfigPaths: true[22m in your Vite config instead.[39m
+
+STDERR: [33mThe plugin "vite-tsconfig-paths" is detected. Vite now supports tsconfig paths resolution natively via the [1mresolve.tsconfigPaths[22m option. You can remove the plugin and set [1mresolve.tsconfigPaths: true[22m in your Vite config instead.[39m
+
+STDERR: [33mThe plugin "vite-tsconfig-paths" is detected. Vite now supports tsconfig paths resolution natively via the [1mresolve.tsconfigPaths[22m option. You can remove the plugin and set [1mresolve.tsconfigPaths: true[22m in your Vite config instead.[39m
+
+STDOUT: [36mvite v8.0.16 [32mbuilding client environment for production...[36m[39m
+
+STDOUT: [2Ktransforming...
+STDOUT: ✓ 6215 modules transformed.
+
+STDOUT: rendering chunks...
+
+STDOUT: computing gzip size...
+
+STDOUT: dist/client/assets/styles-DQoOAPCY.css                 112.96 kB │ gzip:  18.01 kB
+dist/client/assets/chunk-Cyuzqnbw.js                     0.82 kB │ gzip:   0.47 kB
+dist/client/assets/lib-D6cY2qo5.js                      11.09 kB │ gzip:   3.45 kB
+dist/client/assets/leaflet-src-BkppEOnr.js             148.80 kB │ gzip:  43.38 kB
+dist/client/assets/react-force-graph-2d-CgMbT1ys.js    177.85 kB │ gzip:  56.52 kB
+dist/client/assets/index-BsFjDq7l.js                 1,237.34 kB │ gzip: 355.48 kB
+
+
+STDOUT: [32m✓ built in 8.87s[39m
+
+STDERR: [33m[plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.[39m
+
+STDOUT: [36mvite v8.0.16 [32mbuilding ssr environment for production...[36m[39m
+
+STDOUT: [2K
+STDOUT: transforming...
+STDOUT: ✓ 89 modules transformed.
+
+STDOUT: rendering chunks...
+
+STDOUT: computing gzip size...
+
+STDOUT: dist/server/assets/empty-plugin-adapters-D9UWiqvJ.js         0.22 kB │ gzip:  0.16 kB
+dist/server/assets/_tanstack-start-manifest_v-C-NU6FAE.js    0.43 kB │ gzip:  0.30 kB
+dist/server/assets/start-B-B6pMl3.js                         1.97 kB │ gzip:  1.01 kB
+dist/server/server.js                                       60.30 kB │ gzip: 15.46 kB
+dist/server/assets/router-fRk11wfU.js                      212.86 kB │ gzip: 45.17 kB
+
+
+STDOUT: [32m✓ built in 1.47s[39m
+
 Executing catalyst deploy...
