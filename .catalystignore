@@ -1,13 +1,34 @@
-.git
-.tanstack
-node_modules/.bin
-src
+# Ignore local development files and generated packages
+node_modules/
+.npm/
+.npmrc
+.yarnrc*
+yarn.lock
+bun.lock
+bunfig.toml
+package-lock.json
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Ignore VCS and editor metadata
+.git/
+.gitignore
+.vscode/
+.idea/
+.DS_Store
+
+# Ignore build/source config files not needed by runtime
+src/
+public/
 tsconfig.json
-eslint.config.js
 vite.config.ts
+eslint.config.js
 .prettierrc
 .prettierignore
-bunfig.toml
-bun.lock
-package-lock.json
+.catalyst/
+.catalystrc
+deploy-log.txt
+full-deploy-output.txt
 README.md
