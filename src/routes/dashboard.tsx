@@ -2,6 +2,7 @@ import { createFileRoute, Outlet, useRouterState } from "@tanstack/react-router"
 import { Sidebar, MobileTabBar } from "@/components/dashboard/Sidebar";
 import { Header } from "@/components/dashboard/Header";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { AlertTicker } from "@/components/dashboard/AlertTicker";
 
 export const Route = createFileRoute("/dashboard")({
   ssr: false,
@@ -25,11 +26,14 @@ function DashboardLayout() {
   const title = TITLES[pathname] || "Dashboard";
   return (
     <ProtectedRoute>
-      <div className="aurora-bg flex min-h-screen bg-base">
-        <Sidebar />
-        <div className="flex min-w-0 flex-1 flex-col pb-20 md:pb-0">
-          <Header title={title} />
-          <main className="min-h-0 w-full min-w-0 flex-1 overflow-x-hidden p-3 sm:p-4 md:p-6"><Outlet /></main>
+      <div className="aurora-bg flex min-h-screen flex-col bg-base">
+        <AlertTicker />
+        <div className="flex flex-1 min-w-0">
+          <Sidebar />
+          <div className="flex min-w-0 flex-1 flex-col pb-20 md:pb-0">
+            <Header title={title} />
+            <main className="min-h-0 w-full min-w-0 flex-1 overflow-x-hidden p-3 sm:p-4 md:p-6"><Outlet /></main>
+          </div>
         </div>
         <MobileTabBar />
       </div>
