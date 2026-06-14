@@ -13,6 +13,7 @@
     "prestart": "npm run build",
     "start": "node catalyst-server.mjs",
     "postinstall": "npm run build",
+    "deploy": "npm run build && catalyst deploy --project 43414000000013024 --only appsail:ksp-crimeiq",
     "preview": "vite preview",
     "lint": "eslint .",
     "format": "prettier --write ."
