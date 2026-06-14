@@ -1,0 +1,13 @@
+.git
+.tanstack
+node_modules/.bin
+src
+tsconfig.json
+eslint.config.js
+vite.config.ts
+.prettierrc
+.prettierignore
+bunfig.toml
+bun.lock
+package-lock.json
+README.md
