@@ -1,7 +1,7 @@
 {
   "name": "ksp-crimeiq",
-  "command": "npm run start",
-  "stack": "node20",
+  "command": "node catalyst-server.mjs",
+  "stack": "node24",
   "build_path": "..",
   "env_variables": {
     "NODE_ENV": "production"
