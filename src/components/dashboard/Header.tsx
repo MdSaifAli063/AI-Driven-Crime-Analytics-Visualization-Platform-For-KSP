@@ -4,7 +4,6 @@ import { Bell, ChevronDown, LogOut, User as UserIcon, Settings as SettingsIcon, 
 import { toast } from "sonner";
 import { useAuth } from "@/context/AuthContext";
 import { ThemeToggle } from "@/components/ThemeToggle";
-import { AlertTicker } from "./AlertTicker";
 import { GlobalSearch } from "./GlobalSearch";
 import { HelpDialog } from "./HelpDialog";
 import { useNotifications } from "@/context/NotificationsContext";
@@ -135,10 +134,6 @@ export function Header({ title }: { title: string }) {
         </div>
         </div>
         <HelpDialog open={openHelp} onClose={() => setOpenHelp(false)} />
-      </div>
-      {/* ── Full-width ticker row ── */}
-      <div className="border-t border-soft">
-        <AlertTicker />
       </div>
     </header>
   );
